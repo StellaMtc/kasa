@@ -1,0 +1,54 @@
+@import '../../assets/style/variables.module.scss';
+
+.collapse-title {
+  background-color: $main-color;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 17px 5px 17px;
+  box-sizing: border-box;
+  @media (max-width: 769px) {
+    padding: 5px 10px 5px 10px;
+  }
+  p {
+    color: #fff;
+    font-size: 24px;
+  }
+  .arrow {
+    width: 24px;
+    object-fit: contain;
+    transition: 0.5s;
+    @media (max-width: 769px) {
+      width: 16px;
+    }
+    &.down {
+      transform: rotate(-0.5turn);
+    }
+  }
+}
+
+.collapse-parent {
+  overflow: hidden;
+  &.show {
+    transition: height 0.6s ease;
+    p {
+      transform: translate(0px, 20px);
+    }
+  }
+  &.hide {
+    height: 0px;
+    transition: height 0.6s ease;
+  }
+}
+.collapse-content {
+  background-color: $background-color;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0px 16px 10px 16px;
+  p,
+  ul {
+    transition: 0.4s;
+    padding-bottom: 18px;
+  }
+}
