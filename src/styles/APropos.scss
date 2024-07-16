@@ -1,0 +1,16 @@
+#a-propos {
+	margin-bottom: 30px;
+
+	.banner-background {
+		filter: brightness(100%);
+	}
+
+	.collapse-container {
+		width: 80%;
+		margin: 30px auto 0 auto;
+
+		@media (max-width: 700px) {
+			width: 100%;
+		}
+	}
+}

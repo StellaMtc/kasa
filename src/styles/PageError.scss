@@ -1,0 +1,27 @@
+@import '../styles/Variables.scss';
+
+.page-error {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 50px;
+
+	.code-error {
+		margin: auto;
+		color: $main-color;
+		font-size: 200px;
+	}
+
+	.comment {
+		margin: 100px auto auto auto;
+		color: $main-color;
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	.home-btn {
+		margin: 100px auto 50px auto;
+		font-weight: 500;
+		background-color: transparent;
+	}
+}
