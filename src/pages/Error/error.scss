@@ -1,0 +1,32 @@
+.error404,
+.error-msg,
+.link-to-home {
+  text-align: center;
+}
+.error404 {
+  font-size: 288px;
+  font-weight: 700;
+  color: #ff5a5f;
+  margin-top: 100px;
+  @media (max-width: 768px) {
+    font-size: 26vw;
+  }
+}
+.error-msg {
+  margin-top: 20px;
+  font-size: 36px;
+  color: #ff5a5f;
+  @media (max-width: 768px) {
+    font-size: 24px;
+    padding: 10px;
+  }
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+}
+.link-to-home {
+  margin-top: 130px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}

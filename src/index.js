@@ -1,30 +1,26 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./styles/index.scss";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import Footer from "./components/Footer";
-import Article from "./pages/Article";
-import APropos from "./pages/APropos";
-import PageError from "./pages/PageError";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from './components/Header/'
+import Footer from './components/Footer/'
+import Home from './pages/Home/'
+import Apropos from './pages/Apropos/'
+import Estate from './pages/Estate'
+import Error from './pages/Error'
+import './index.scss'
 
-function App() {
-  return (
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
     <Router>
       <Header />
       <Routes>
-        <Route path="/Kasa/" element={<Home />} />
-        <Route path="/Kasa/logements/:id" element={<Article />} />
-        <Route path="/Kasa/a-propos" element={<APropos />} />
-        <Route path="/kasa/*" element={<PageError />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/a-propos" element={<Apropos />} />
+        <Route path="/estate/:id" element={<Estate />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </Router>
-  );
-}
-
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-
-root.render(<App />);
+  </React.StrictMode>
+)
